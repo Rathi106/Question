@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #6c5ce7 0%, #341f97 100%);
+    color: #2d2d2d;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 48px 56px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.title {
+    margin: 0 0 12px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #341f97;
+}
+
+.question {
+    margin: 0 0 32px;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.button-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-safe {
+    background: #00b894;
+    color: #ffffff;
+}
+
+.btn-evil {
+    position: absolute;
+    background: #d63031;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.result {
+    margin-top: 24px;
+    min-height: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #341f97;
+}
