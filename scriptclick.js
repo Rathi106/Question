@@ -19,8 +19,8 @@ safe.addEventListener('click', () => {
 
 // Every click on the evil button just moves it somewhere new instead of "working"
 evil.addEventListener('click', () => {
-    clickCount++;
-    result.textContent = `Nice try (attempt #${clickCount}). It moved again.`;
+    // clickCount++;
+    result.textContent = `Jaldi click karrrr!!!!`;
     moveButtonRandomly();
 });
 
