@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
 
 // The "safe" button behaves like a normal button
 safe.addEventListener('click', () => {
-    result.textContent = "You clicked the easy one. The other one is waiting...";
+    result.textContent = "Sahi jawab 7 croreeeeeee";
 });
 
 // Every click on the evil button just moves it somewhere new instead of "working"
