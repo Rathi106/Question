@@ -14,67 +14,96 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: linear-gradient(135deg, #6c5ce7 0%, #341f97 100%);
-    color: #2d2d2d;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #fff4e6;
+    color: #3a2e2c;
 }
 
 .card {
     background: #ffffff;
-    border-radius: 16px;
-    padding: 48px 56px;
+    border-left: 6px solid #ff6f61;
+    padding: 44px 52px;
     max-width: 480px;
     width: 90%;
-    text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    text-align: left;
     z-index: 1;
 }
 
 .title {
-    margin: 0 0 12px;
-    font-size: 1.8rem;
+    margin: 0 0 4px;
+    font-size: 0.75rem;
     font-weight: 700;
-    color: #341f97;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ff6f61;
 }
 
 .question {
-    margin: 0 0 32px;
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.5;
+    margin: 8px 0 32px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #3a2e2c;
 }
 
 .button-row {
     display: flex;
-    gap: 16px;
-    justify-content: center;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 .btn {
-    padding: 14px 28px;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 10px;
+    display: inline-block;
+    padding: 13px 22px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border: 2px solid #3a2e2c;
+    border-radius: 0;
     cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-decoration: none;
+    background: #ffffff;
+    color: #3a2e2c;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background: #3a2e2c;
+    color: #ffffff;
 }
 
 .btn-safe {
-    background: #00b894;
-    color: #ffffff;
+    background: #ffd166;
+    border-color: #3a2e2c;
+    color: #3a2e2c;
+}
+
+.btn-safe:hover {
+    background: #3a2e2c;
+    color: #ffd166;
+}
+
+.btn-safe.pop {
+    animation: popOut 0.3s ease-in forwards;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
 
 .btn-evil {
     position: absolute;
-    background: #d63031;
-    color: #ffffff;
+    background: #06d6a0;
+    color: #14171a;
+    border-color: #3a2e2c;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -83,7 +112,7 @@ body {
 .result {
     margin-top: 24px;
     min-height: 24px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: #341f97;
+    color: #ff6f61;
 }
