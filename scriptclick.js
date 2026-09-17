@@ -12,15 +12,21 @@ window.addEventListener('load', () => {
     evil.style.top = `${safeBox.top}px`;
 });
 
-// The "safe" button behaves like a normal button
+// The "safe" button pops, then takes the user to a new page
 safe.addEventListener('click', () => {
-    result.textContent = "Sahi jawab 7 croreeeeeee";
+    safe.classList.add('pop');
+    setTimeout(() => {
+        window.location.href = 'last.html';
+    }, 300);
+});
+
+safe.addEventListener('click', () => {
+    result.textContent = "Thankyou <3!!";
 });
 
 // Every click on the evil button just moves it somewhere new instead of "working"
 evil.addEventListener('click', () => {
-    // clickCount++;
-    result.textContent = `Jaldi click karrrr!!!!`;
+    result.textContent = `Umm..`;
     moveButtonRandomly();
 });
 
